@@ -136,7 +136,7 @@ function saveResponse(formIndex, response) {
 }
 
 function logout() {
-    window.location.href = "index.html";
+    window.location.href = "../index.html";
 }
 
 displayForms();

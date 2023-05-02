@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;  
+        background: linear-gradient(to bottom, #b19cd9, white);
+        height: 100vh;
+        width: 100vw;
+}
+
+.btn-primary {
+    background-color: #1c50b4;
+  }
+  
+  .logo {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-image: url('utc.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    vertical-align: middle; /* o vertical-align: top; */
+  }
+  
+  
+
+  

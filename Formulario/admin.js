@@ -49,7 +49,7 @@ function deleteForm(index) {
 }
 
 function logout() {
-    window.location.href = "index.html";
+    window.location.href = "../index.html";
 }
 
 createForm.addEventListener('submit', (event) => {
