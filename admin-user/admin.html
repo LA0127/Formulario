@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="utc.png" type="image/x-icon">
+</head>
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand">Bienvenido</a>
+        <button class="btn btn-outline-danger" onclick="logout()">Cerrar sesión</button>
+    </div>
+</nav>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4"><span class="logo"></span>Panel del Administrador</h1>
+
+        <ul class="nav nav-tabs" id="adminTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="create-forms-tab" data-bs-toggle="tab" href="#create-forms"
+                    role="tab">Crear formularios</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="view-forms-tab" data-bs-toggle="tab" href="#view-forms" role="tab">Ver
+                    formularios creados</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="view-responses-tab" data-bs-toggle="tab" href="#view-responses" role="tab">Ver
+                    respuestas de los formularios</a>
+            </li>
+        </ul>
+        <div class="tab-content mt-3">
+            <div class="tab-pane active" id="create-forms" role="tabpanel">
+                <div class="card">
+                    <div class="card-header">
+                        Crear formulario
+                    </div>
+                    <div class="card-body">
+                        <form id="create-form">
+                            <div class="mb-3">
+                                <label for="title" class="form-label">Título del formulario</label>
+                                <input type="text" class="form-control" id="title" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="question" class="form-label">Pregunta</label>
+                                <input type="text" class="form-control" id="question" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="response-type" class="form-label">Tipo de respuesta</label>
+                                <select id="response-type" class="form-select">
+                                    <option value="multiple_choice">Varias opciones</option>
+                                    <option value="checkbox">Casillas</option>
+                                    <option value="dropdown">Desplegable</option>
+                                    <option value="short_answer">Respuesta corta</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="options" class="form-label">Opciones (separadas por comas)</label>
+                                <input type="text" class="form-control                            " id="options" placeholder="opcion1, opcion2, opcion3">
+                            </div>
+                            <div class="mb-3">
+                                <label for="correct-answers" class="form-label">Respuestas correctas (separadas por
+                                    comas)</label>
+                                <input type="text" class="form-control" id="correct-answers"
+                                    placeholder="opcion1, opcion3">
+                            </div>
+    
+                            <button type="submit" class="btn btn-primary">Crear formulario</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="view-forms" role="tabpanel">
+                <div class="card">
+                    <div class="card-header">
+                        Formularios publicados
+                    </div>
+                    <div class="card-body" id="published-forms">
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane" id="view-responses" role="tabpanel">
+                <hr>
+                <div class="card">
+                    <div class="card-header">
+                        Respuestas de los usuarios
+                    </div>
+                    <div class="card-body" id="user-responses">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

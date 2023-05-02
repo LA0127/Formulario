@@ -15,9 +15,9 @@ loginForm.addEventListener('submit', (event) => {
 
     if (user) {
         if (user.userType === 'admin') {
-            window.location.href = '/Formulario/admin.html';
+            window.location.href = '/admin-user/admin.html';
         } else {
-            window.location.href = '/Formulario/user.html';
+            window.location.href = '/admin-user/user.html';
         }
     } else {
         alert('Usuario o contraseña incorrecta');
